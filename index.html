@@ -1101,6 +1101,32 @@ nav a.active::after{
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* space between buttons */
+    width: 100%;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+	@media (max-width: 768px) {
+  .about ul {
+    padding-left: 18px;
+    text-align: left;
+  }
+
+  .about li {
+    text-align: left;
+  }
+}
+	
 </style>
 </head>
 <body>
@@ -1177,10 +1203,8 @@ Available for Remote Work.
   <span># Remote & Contract Friendly</span>
 </div>
 
-     
-	  
-	  <!----<a href="#" class="btn">Let's Connect</a>---->
-	<a href="https://wa.me/233548999107?text=Hello%20Paul,%20I%20would%20like%20to%20work%20with%20you."
+<div class="hero-buttons">
+  <a href="https://wa.me/233548999107?text=Hello%20Paul,%20I%20would%20like%20to%20work%20with%20you."
    target="_blank"
    class="btn"> <i class="fa-brands fa-whatsapp"></i> 
    Let's Connect </a>
@@ -1188,6 +1212,11 @@ Available for Remote Work.
 <a href="Paul_Tandoh_Asare_CV.pdf" class="btn" download>
 <i class="fa-solid fa-download"></i> Download CV
 </a>
+	
+</div>
+	  
+	  
+	
 
     </div>
 
@@ -2425,6 +2454,7 @@ toggleBtn.addEventListener("click", () => {
 	
 </body>
 </html>
+
 
 
 
