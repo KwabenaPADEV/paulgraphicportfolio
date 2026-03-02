@@ -1077,6 +1077,30 @@ nav a.active::after{
 
 }
 
+	/* Tech Stack Two Columns */
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 40px;
+  margin-top: 10px;
+}
+
+.tech-stack div {
+  font-size: 18px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+}
+
+.tech-stack div span {
+  color: var(--primary);
+  margin-right: 10px;
+}
+@media(max-width:768px){
+  .tech-stack {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 <body>
@@ -1268,19 +1292,22 @@ for startups, businesses, and international clients.
         <div><span>05</span> Cybersecurity Activist</div>
       </div>
 
-	
-	<span class="services-label">Tech Stack</span>
-	   <div class="services-list">
-        <div><span>•</span> HTML5    <span>    •   </span> CSS3 </div>
-        <div><span>•</span> JavaScript </div>
-        <div><span>•</span> PHP</div>
-        <div><span>•</span> React</div>
-		<div><span>•</span> MySQL</div>
-		<div><span>•</span> WordPress</div>
-		<div><span>•</span> REST APIs</div>
-		<div><span>•</span> Git</div>
-		<div><span>•</span> SEO Optimization</div>
-      </div>
+
+		<span class="services-label">Tech Stack</span>
+
+		<div class="services-list tech-stack">
+		  <div><span>•</span> HTML5</div>
+		  <div><span>•</span> CSS3</div>
+		  <div><span>•</span> JavaScript</div>
+		  <div><span>•</span> PHP</div>
+		  <div><span>•</span> React</div>
+		  <div><span>•</span> MySQL</div>
+		  <div><span>•</span> WordPress</div>
+		  <div><span>•</span> REST APIs</div>
+		  <div><span>•</span> Git</div>
+		  <div><span>•</span> SEO Optimization</div>
+		</div>
+
 
     </div>
 
@@ -2398,6 +2425,7 @@ toggleBtn.addEventListener("click", () => {
 	
 </body>
 </html>
+
 
 
 
