@@ -1128,6 +1128,31 @@ nav a.active::after{
     text-align: left;
   }
 }
+
+	.portfolio-item {
+  display: block;
+}
+
+.portfolio-item.hide {
+  display: none; /* removes blank space */
+}
+
+	.gallery {
+  height: auto;
+}
+	.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+	.portfolio-item {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-item.hide {
+  opacity: 0;
+  transform: scale(0.95);
+}
 	
 </style>
 </head>
@@ -2435,6 +2460,23 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
+const filterButtons = document.querySelectorAll(".filter-btn");
+const items = document.querySelectorAll(".portfolio-item");
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const filter = button.getAttribute("data-filter");
+
+    items.forEach(item => {
+      if (filter === "all" || item.classList.contains(filter)) {
+        item.classList.remove("hide");
+      } else {
+        item.classList.add("hide");
+      }
+    });
+  });
+});
+
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
@@ -2456,6 +2498,7 @@ toggleBtn.addEventListener("click", () => {
 	
 </body>
 </html>
+
 
 
 
